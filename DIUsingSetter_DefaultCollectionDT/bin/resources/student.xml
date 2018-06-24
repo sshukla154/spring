@@ -1,0 +1,38 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+	<bean id="student" class="com.learning.beans.Student">
+		<property name="studentNames">
+			<list>
+				<value>Seemant</value>
+				<value>Shashank</value>
+				<value>Shivam</value>
+				<value>Dev</value>
+				<value>Parul</value>
+				<value>Parul</value>
+			</list>
+		</property>
+		<property name="subjects">
+			<set>
+				<value>Physics</value>
+				<value>Chemistry</value>
+				<value>Biology</value>
+				<value>Maths</value>
+				<value>Maths</value>
+				<value>IT</value>
+			</set>
+		</property>
+		<property name="classAndMonitor">
+		<map>
+		<entry key="First" value="Sahil"/>
+		<entry key="Second" value="Sunil"/>
+		<entry key="Third" value="Arpit"/>
+		<entry key="Fourth" value="Neon"/>
+		<entry key="Fifth" value="Dev"/>
+		
+		</map>
+		
+		</property>
+	</bean>
+</beans>

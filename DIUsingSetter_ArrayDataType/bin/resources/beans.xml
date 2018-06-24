@@ -1,0 +1,45 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+	<bean id="car" class="com.learning.beans.Car">
+		<!-- 1. Primitive Array Data Type -->
+		<property name="carNames">
+			<list>
+				<value>Audi</value>
+				<value>Lamborghini</value>
+				<value>Mercedes</value>
+				<value>Rolls Royce</value>
+				<value>Bugatti</value>
+			</list>
+		</property>
+		<!-- 2. Secondary Array Data Type -->
+		<property name="engines">
+			<list>
+				<ref bean="engine1" />
+				<ref bean="engine2" />
+				<ref bean="engine3" />
+				<ref bean="engine4" />
+				<ref bean="engine5" />
+			</list>
+		</property>
+	</bean>
+	<bean id="engine1" class="com.learning.beans.Engine">
+		<property name="modelYear" value="1980" />
+	</bean>
+	<bean id="engine2" class="com.learning.beans.Engine">
+		<property name="modelYear" value="1890" />
+	</bean>
+	<bean id="engine3" class="com.learning.beans.Engine">
+		<property name="modelYear" value="1950" />
+	</bean>
+	<bean id="engine4" class="com.learning.beans.Engine">
+		<property name="modelYear" value="1967" />
+	</bean>
+	<bean id="engine5" class="com.learning.beans.Engine">
+		<property name="modelYear" value="2000" />
+	</bean>
+
+
+
+</beans>

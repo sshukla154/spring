@@ -1,0 +1,53 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+	<!-- 1.dependency-check="none" -->
+	<!-- <bean id="student" class="com.learning.beans.Student" dependency-check="none></bean> -->
+
+	<!-- 2. dependency-check="simple" -->
+	<!-- <bean id="student" class="com.learning.beans.Student" dependency-check="simple"> 
+		<property name="studentId" value="123" /> <property name="studentName" value="Seemant 
+		Shukla" /> <property name="emailId" value="er.seemantshukla@gmail.com" /> 
+		</bean> -->
+
+
+	<!-- 2(1). dependency-check="simple" -->
+	<!-- <bean id="student" class="com.learning.beans.Student" dependency-check="objects"> 
+		<property name="address" ref="address" /> </bean> <bean id="address" class="com.learning.beans.Address"></bean> -->
+
+
+
+	<!-- 2(2). dependency-check="simple" -->
+	<!-- <bean id="student" class="com.learning.beans.Student"
+		dependency-check="objects">
+		<property name="address" ref="address" />
+	</bean>
+	<bean id="address" class="com.learning.beans.Address">
+		<property name="pinCode" value="560095" />
+		<property name="country" value="India" />
+		<property name="state" value="Bangalore" />
+		<property name="area" value="Kormangala"></property>
+		<property name="buildingName" value="Aster" />
+		<property name="buildingNumber" value="97" />
+	</bean> -->
+	
+	
+	<!-- 3. dependency-check="all" -->
+	<bean id="student" class="com.learning.beans.Student"
+		dependency-check="all">
+		<property name="studentId" value="123"/>
+		<property name="studentName" value="Seemant Shukla"/>
+		<property name="emailId" value="er.seemantshukla@gmail.com"/>
+		<property name="address" ref="address" />
+	</bean>
+	<bean id="address" class="com.learning.beans.Address">
+		<property name="pinCode" value="560095" />
+		<property name="country" value="India" />
+		<property name="state" value="Bangalore" />
+		<property name="area" value="Kormangala"></property>
+		<property name="buildingName" value="Aster" />
+		<property name="buildingNumber" value="97" />
+	</bean>
+</beans>

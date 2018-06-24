@@ -1,0 +1,25 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+	<!-- Approach 1: Pass By Reference : Same reference "engine" can be used 
+		for multiple DI -->
+	<!-- <bean id="car" class="com.learning.beans.Car"> <property name="carName" 
+		value="Mer" /> <property name="engine" ref="engine" /> </bean> <bean id="engine" 
+		class="com.learning.beans.Engine"> <property name="modelYear" value="1990" 
+		/> </bean> -->
+
+	<!-- Approach 2: Pass By Value : Each time we have to-do DI explicitly -->
+
+	<bean id="car" class="com.learning.beans.Car">
+		<property name="carName" value="Mer" />
+		<property name="engine">
+			<bean id="engine" class="com.learning.beans.Engine">
+				<property name="modelYear" value="1990" />
+			</bean>
+		</property>
+	</bean>
+
+
+</beans>

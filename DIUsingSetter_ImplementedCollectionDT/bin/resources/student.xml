@@ -1,0 +1,40 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+	<bean id="student" class="com.learning.beans.Student">
+		<property name="studentNames">
+			<util:list list-class="java.util.Vector">
+				<value>Seemant</value>
+				<value>Shashank</value>
+				<value>Shivam</value>
+				<value>Dev</value>
+				<value>Harsh</value>
+			</util:list>
+		</property>
+		<property name="subjects">
+			<util:set set-class="java.util.TreeSet">
+				<value>Hindi</value>
+				<value>English</value>
+				<value>Maths</value>
+				<value>Science</value>
+				<value>Computer</value>
+			</util:set>
+		</property>
+		<property name="classAndMonitor">
+			<util:map map-class="java.util.Hashtable">
+				<entry key="First" value="Skand" />
+				<entry key="Second" value="Shivam" />
+				<entry key="Third" value="Ram" />
+				<entry key="Fourth" value="Saksham" />
+				<entry key="Fifth" value="Dolly" />
+				<entry key="Sixth" value="Dev" />
+			</util:map>
+		</property>
+	</bean>
+</beans>
