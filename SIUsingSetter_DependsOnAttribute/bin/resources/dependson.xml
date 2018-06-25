@@ -1,0 +1,25 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+	<!-- 1. Excute without using depends-on attribute and observe the output -->
+
+	<!-- <bean id="first" class="com.learning.beans.FirstDependsOnSecond"></bean> 
+		<bean id="second" class="com.learning.beans.SecondDependsOnThird"></bean> 
+		<bean id="third" class="com.learning.beans.Third"></bean> -->
+
+
+	<!-- 2(1). Using depends-on attribute -->
+	<!-- <bean id="first" class="com.learning.beans.FirstDependsOnSecond" depends-on="third"></bean> 
+		<bean id="second" class="com.learning.beans.SecondDependsOnThird"></bean> 
+		<bean id="third" class="com.learning.beans.Third" depends-on="second"></bean> -->
+
+	<!-- 2(2). Using depends-on attribute -->
+	<bean id="first" class="com.learning.beans.FirstDependsOnSecond"
+		depends-on="second"></bean>
+	<bean id="second" class="com.learning.beans.SecondDependsOnThird"
+		depends-on="third"></bean>
+	<bean id="third" class="com.learning.beans.Third"></bean>
+
+
+</beans>

@@ -1,0 +1,32 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+
+<beans>
+	<!-- By Type -->
+	<bean id="address1" class="com.learning.beans.Address">
+		<constructor-arg value="560095" />
+		<constructor-arg value="India" />
+		<constructor-arg value="Karnataka" />
+		<constructor-arg value="Kormangala" />
+		<constructor-arg value="Aster" />
+		<constructor-arg value="#97" />
+	</bean>
+	<bean id="address2" class="com.learning.beans.Address"
+		autowire-candidate="false">
+		<constructor-arg value="560035" />
+		<constructor-arg value="India" />
+		<constructor-arg value="Karnataka" />
+		<constructor-arg value="Hadosiddhapura" />
+		<constructor-arg value="Laki" />
+		<constructor-arg value="#94" />
+	</bean>
+
+	<bean id="student" class="com.learning.beans.Student"
+		autowire="byType">
+		<property name="studentId" value="12345" />
+		<property name="studentName" value="Seemant Shukla" />
+		<property name="emailId" value="er.seemantshukla@gmail.com" />
+	</bean>
+
+</beans>
